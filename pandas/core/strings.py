@@ -1957,6 +1957,14 @@ class StringMethods(NoNewAttributesMixin):
         Returns
         -------
         filled : Series/Index of objects
+
+        Examples
+        --------
+
+        >>> 'astring'.zfill(10)
+        '000astring'
+        >>> print(len('astring'), len('astring'.zfill(10)))
+        7 10
         """
         result = str_pad(self._data, width, side='left', fillchar='0')
         return self._wrap_result(result)
