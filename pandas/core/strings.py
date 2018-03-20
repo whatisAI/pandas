@@ -1970,6 +1970,7 @@ class StringMethods(NoNewAttributesMixin):
         >>> s
         0    String1
         1    String2
+        dtype: object
         >>> s.str.zfill(10)
         0    000String1
         1    000String2
