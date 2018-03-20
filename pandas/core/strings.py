@@ -1946,29 +1946,32 @@ class StringMethods(NoNewAttributesMixin):
     def zfill(self, width):
         """
         Filling left side of strings in the Series/Index with 0.
+
         Equivalent to :meth:`str.zfill`.
 
         Parameters
         ----------
         width : int
             Minimum width of resulting string; additional characters will be
-            filled with 0
+            filled with 0.
 
         Returns
         -------
         filled : Series/Index of objects
 
+        See Also
+        --------
+        zfill
+
         Examples
         --------
         >>> s = pd.Series(['String1', 'String2'])
-        >>> s2 = s.str.zfill(10)
-        >>> print(s2)
-        0    000String1
-        1    000String2
-        dtype: object
-        >>> print(s)
+        >>> s
         0    String1
         1    String2
+        >>> s.str.zfill(10)
+        0    000String1
+        1    000String2
         dtype: object
         """
         result = str_pad(self._data, width, side='left', fillchar='0')
