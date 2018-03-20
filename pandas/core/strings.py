@@ -1960,10 +1960,16 @@ class StringMethods(NoNewAttributesMixin):
 
         Examples
         --------
-        >>> 'astring'.zfill(10)
-        '000astring'
-        >>> print(len('astring'), len('astring'.zfill(10)))
-        7 10
+        >>> s = pd.Series(['String1', 'String2'])
+        >>> s2 = s.str.zfill(10)
+        >>> print(s2)
+        0    000String1
+        1    000String2
+        dtype: object
+        >>> print(s)
+        0    String1
+        1    String2
+        dtype: object
         """
         result = str_pad(self._data, width, side='left', fillchar='0')
         return self._wrap_result(result)
