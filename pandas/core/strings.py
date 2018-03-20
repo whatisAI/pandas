@@ -1961,10 +1961,11 @@ class StringMethods(NoNewAttributesMixin):
 
         See Also
         --------
-        zfill
+        zfill : pads with zeros
 
         Examples
         --------
+        >>> import pandas as pd
         >>> s = pd.Series(['String1', 'String2'])
         >>> s
         0    String1
