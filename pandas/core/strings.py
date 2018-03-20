@@ -1960,7 +1960,6 @@ class StringMethods(NoNewAttributesMixin):
 
         Examples
         --------
-
         >>> 'astring'.zfill(10)
         '000astring'
         >>> print(len('astring'), len('astring'.zfill(10)))
